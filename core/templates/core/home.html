@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+{% block title %}الرئيسية - STEP CENTER{% endblock %}
+{% block content %}
+
+<div id="home" class="page active">
+  <section class="hero loading">
+      <div class="hero-content">
+          <div class="hero-badge">مكتب هندسي متخصص منذ 2010</div>
+          <h1>الريادة في الهندسة الإنشائية</h1>
+          <p class="hero-subtitle">نقدم حلولاً هندسية متطورة ومبتكرة تجمع بين الخبرة العملية والتقنيات الحديثة لضمان تنفيذ مشاريع استثنائية تلبي أعلى معايير الجودة والسلامة</p>
+          <div class="cta-group">
+              <a href="{% url 'core:contact' %}" class="btn-primary" onclick="showPage('contact')">ابدأ مشروعك الآن</a>
+              <a href="{% url 'core:services' %}" class="btn-secondary" onclick="showPage('services')">استكشف خدماتنا</a>
+          </div>
+      </div>
+  </section>
+
+  <section class="section">
+      <div class="section-header loading stagger-1">
+          <h2 class="section-title">خدماتنا المتميزة</h2>
+          <p class="section-subtitle">نقدم مجموعة شاملة من الخدمات الهندسية المتخصصة التي تغطي جميع احتياجاتك في مجال الهندسة الإنشائية</p>
+      </div>
+      <div class="services-grid">
+        
+        {% for service in services %}
+        <div class="service-card loading stagger-2">
+            <div class="service-icon">{{ service.icon }}</div>
+            <h3> {{service.title}} </h3>
+            <p>{{service.description}}</p>
+        </div>
+        {% endfor %}
+            
+            
+      </div>
+  </section>
+</div>
+
+{% endblock %}

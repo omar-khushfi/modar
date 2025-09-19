@@ -1,0 +1,85 @@
+{% extends "core/base.html" %}
+{% block title %}اتصل بنا - STEP CENTER{% endblock %}
+{% block content %}
+ <!-- Contact Page -->
+ <div id="contact" class="page">
+    <section class="section">
+        <div class="section-header loading">
+            <h2 class="section-title">تواصل معنا</h2>
+            <p class="section-subtitle">نحن هنا لمساعدتكم في تحقيق أحلامكم الهندسية، تواصلوا معنا للحصول على استشارة مجانية</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-form loading stagger-1">
+                <h3 style="color: var(--primary-green); margin-bottom: 2rem; font-size: 1.5rem;">أرسل لنا رسالة</h3>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">نوع الخدمة المطلوبة</label>
+                        <select id="service" name="service" required>
+                            <option value="">اختر نوع الخدمة</option>
+                            <option value="structural">تصميم إنشائي</option>
+                            <option value="consulting">استشارات هندسية</option>
+                            <option value="testing">فحوصات مختبرية</option>
+                            <option value="supervision">إشراف هندسي</option>
+                            <option value="other">خدمات أخرى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">تفاصيل المشروع</label>
+                        <textarea id="message" name="message" rows="5" placeholder="اكتب تفاصيل مشروعك هنا..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                </form>
+            </div>
+
+            <div class="contact-info loading stagger-2">
+                <h3 style="color: var(--primary-green); margin-bottom: 2rem; font-size: 1.5rem;">معلومات التواصل</h3>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>عنوان المكتب</h4>
+                        <p>سوريا - دمشق - شارع عبد الحميد الدروبي<br>مبنى الدروبي - الطابق الثالث</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>أرقام الهواتف</h4>
+                      <p style="direction: ltr;">+971 503 120 632<br>+963 954 542 105<br>+963 31-2460203</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h4>البريد الإلكتروني</h4>
+                        <p>info.step.program@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div class="contact-details">
+                        <h4>ساعات العمل</h4>
+                        <p>الأحد - الخميس: 8:00 ص - 6:00 م<br>السبت: 9:00 ص - 2:00 م</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

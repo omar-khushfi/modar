@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}STEP CENTER{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+  <header id="header">
+      <div class="container">
+          <div class="header-content">
+              <div class="logo">
+                  <div class="logo-mark">sp</div>
+                  <div class="logo-text">
+                      <div class="logo-title">STEP CENTER</div>
+                      <div class="logo-subtitle">مكتب ستيب سنتر للدراسات والأبحاث</div>
+                  </div>
+              </div>
+              <nav>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul id="nav-menu">
+                  <li><a href="{% url 'core:home' %}">الرئيسية</a></li>
+                  <li><a href="{% url 'core:services' %}">خدماتنا</a></li>
+                  <li><a href="{% url 'core:news_list' %}">الأخبار</a></li>
+                  <li><a href="{% url 'core:projects' %}">مشاريعنا</a></li>
+                  <li><a href="{% url 'core:about_us' %}">من نحن</a></li>
+                  <li><a href="{% url 'core:contact' %}">اتصل بنا</a></li>
+                </ul>
+              </nav>
+              
+               
+          </div>
+      </div>
+  </header>
+
+ 
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+ 
+  <footer class="site-footer">
+    <p>© 2025 STEP CENTER - جميع الحقوق محفوظة</p>
+    <div class="social-links">
+      <a href="https://t.me/+uqwYUuYi6_g3ODU0" target="_blank" class="telegram">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="https://www.facebook.com/STEPPrograms" target="_blank" class="facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </footer>
+  
+
+
+
+  <script>
+  
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+        document.getElementById('nav-menu').classList.toggle('show');
+    }
+
+   
+
+ 
+</script>
+
+</body>
+</html>
